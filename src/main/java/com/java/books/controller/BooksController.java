@@ -70,7 +70,6 @@ public class BooksController {
         return books.stream()
                 .filter(book -> book.getId() == id)
                 .findFirst()
-                .orElse(null);
     }
 
     @GetMapping
