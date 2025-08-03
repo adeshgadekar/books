@@ -1,4 +1,4 @@
-package exception;
+package com.java.books.exception;
 
 import com.java.books.entity.Book;
 

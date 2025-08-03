@@ -1,4 +1,4 @@
-package exception;
+package com.java.books.exception;
 
 import java.security.PrivateKey;
 import java.util.PrimitiveIterator;

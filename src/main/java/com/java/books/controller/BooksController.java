@@ -2,6 +2,7 @@ package com.java.books.controller;
 
 import com.java.books.dto.BookRequest;
 import com.java.books.entity.Book;
+import com.java.books.exception.BookNotFoundException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import org.springframework.http.HttpStatus;
@@ -70,6 +71,7 @@ public class BooksController {
         return books.stream()
                 .filter(book -> book.getId() == id)
                 .findFirst()
+                .orElseThrow(() -> new BookNotFoundException("Book not found for id " + id));
     }
 
     @GetMapping
